@@ -4,14 +4,30 @@
     "description": "Make the “Received” column in IMAP folders show when messages were actually received.",
     "author": "Jonathan Kamens",
     "homepage_url": "https://addons.mozilla.org/thunderbird/addon/imap-received-date/",
-    "legacy": {
-        "type": "bootstrap"
+
+    "background":{
+        "scripts":[
+             "background.js"
+        ]
+      },
+
+
+      "experiment_apis":{
+
+        "imaprd_bgrndAPI":{
+            "schema":"schema.json",
+            "parent":{
+                "scopes":["addon_parent"],
+                "script":"background-implementation.js",
+                "paths":[["imaprd_bgrndAPI"]]
+            }
+        }
     },
     "applications": {
         "gecko": {
             "id": "IMAPReceivedDate@kamens.us",
             "strict_min_version": "68.0a1",
-            "strict_max_version": "71.*"
+            "strict_max_version": "80.*"
         }
     },
     "manifest_version": 2

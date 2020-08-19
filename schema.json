@@ -1,0 +1,16 @@
+[
+    {
+        "namespace":"imaprd_bgrndAPI",
+        "functions":[
+            {
+                "name":"OnStartup",
+                "type":"function",
+                "desription":"on startup",
+                "async":true,
+                "parameters":[]
+            }
+
+        ]
+            }
+
+]
